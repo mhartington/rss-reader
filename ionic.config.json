@@ -1,0 +1,7 @@
+{
+  "name": "rss-reader",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
