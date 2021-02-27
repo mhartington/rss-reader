@@ -26,13 +26,17 @@
   <!--   </ion-item>                                   -->
   <!-- </ng-container>                                 -->
 
-
-  <ng-container *rxLet="rssFeed$ as feed">
-    <ion-item *ngFor="let item of feed.items">
+  <ng-container *rxLet="rssFeed$; let feed; rxSuspense: suspenseTpl">
+    <ion-item *ngFor="let item of feed?.items">
       <ion-label>
         <h1>{{item.title}}</h1>
         <p>{{item.authors[0]}}</p>
       </ion-label>
     </ion-item>
   </ng-container>
+
+  <ng-template #suspenseTpl>
+    Loading...
+  </ng-template>
+
 </ion-content>
