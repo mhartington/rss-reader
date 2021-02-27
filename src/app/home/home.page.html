@@ -27,7 +27,7 @@
   <!-- </ng-container>                                 -->
 
 
-  <ng-container *ngLet="rssFeed$ as feed">
+  <ng-container *rxLet="rssFeed$ as feed">
     <ion-item *ngFor="let item of feed.items">
       <ion-label>
         <h1>{{item.title}}</h1>
