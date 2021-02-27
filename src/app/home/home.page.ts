@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FeedService } from '../services/feed.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
+  public rssFeed$ = this.feedService.fetchFeed()
+  constructor(private feedService: FeedService) {}
+  ngOnInit(){}
 
 }
